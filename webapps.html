@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>WebApps</title>
+    <!-- Fuente Campana Script (Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Campana+Script&display=swap" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #080013 0%, #b202f8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .top-brand {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            font-size: 6em;
+            font-family: 'Campana Script', cursive, 'Pacifico', 'Segoe Script', 'Comic Sans MS', Calibri, sans-serif;
+            font-weight: normal;
+            color: #041292;
+            letter-spacing: 10px;
+            z-index: 300;
+            user-select: none;
+            /* Efecto 3D */
+            text-shadow:
+                0 4px 12px #1e6872,
+                0 1px 0 #2a7e98,
+                2px 2px 0 rgba(252, 252, 252, 0.533),
+                0 8px 24px rgba(253, 252, 252, 0.4);
+            filter: drop-shadow(0 2px 8px #2a5298);
+        }
+        .central-box {
+            background: #000314de;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(2, 125, 241, 0.87);
+            padding: 40px 32px 24px 32px;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+            justify-content: center;
+        }
+        .row-container {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            justify-content: center;
+        }
+        .row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .row img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 2px 8px rgba(44,83,100,0.08);
+        }
+        .row-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #8502b8;
+            margin: 0;
+        }
+        .oval-btn {
+            display: inline-block;
+            padding: 10px 32px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #22027c 0%, #2a5298 100%);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1em;
+            border: none;
+            transition: background 0.2s;
+            box-shadow: 0 2px 8px rgba(44,83,100,0.12);
+        }
+        .oval-btn:hover {
+            background: linear-gradient(90deg, #22027c 0%, #b502fc 100%);
+        }
+        .bottom-oval {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background: #000316;
+            border-radius: 999px;
+            padding: 6px 18px;
+            gap: 16px;
+            min-width: 180px;
+            box-shadow: 0 2px 8px rgba(2, 174, 248, 0.781);
+            border: 2px solid #fdfcfd;
+        }
+        .bottom-link {
+            color: #02b5fc;
+            text-decoration: none;
+            font-size: 0.95em;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 999px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .bottom-link:hover {
+            background: linear-gradient(90deg, #b502fc 0%, #22027c 100%);
+            color: #ffffff;
+        }
+        @media (max-width: 700px) {
+            .row-container {
+                flex-direction: column;
+                gap: 24px;
+            }
+            .central-box {
+                padding: 24px 8px 16px 8px;
+            }
+            .top-brand {
+                font-size: 2.2em;
+                letter-spacing: 2px;
+                top: 16px;
+            }
+        }
+        .bottom-oval-fixed {
+            position: fixed;
+            right: 32px;
+            bottom: 32px;
+            z-index: 100;
+            display: flex;
+            justify-content: flex-end;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-brand">WebApps</div>
+    <div>
+        <div class="central-box">
+            <div class="row-container">
+                <div class="row">
+                    <img src="picture/conver.png" alt="Imagen 1">
+                    <div class="row-title">Conver Picture</div>
+                    <a class="oval-btn" href="https://hero-br.github.io/conver-picture.html" target="_blank">Acceder</a>
+                </div>
+                <div class="row">
+                    <img src="picture/conver.png" alt="Imagen 2">
+                    <div class="row-title">Conver PDF</div>
+                    <a class="oval-btn" href="https://hero-br.github.io/conver-pdf.html" target="_blank">Acceder</a>
+                </div>
+                <div class="row">
+                    <img src="picture/scribus.svg" alt="Imagen 3">
+                    <div class="row-title">Proyect</div>
+                    <a class="oval-btn" href="https://terran-os.github.io/" target="_blank">Acceder</a>
+                </div>
+                <div class="row">
+                    <img src="picture/scribus.svg" alt="Imagen 3">
+                    <div class="row-title">Proyect</div>
+                    <a class="oval-btn" href="https://terran-os.github.io/" target="_blank">Acceder</a>
+                </div>
+                <div class="row">
+                    <img src="picture/scribus.svg" alt="Imagen 3">
+                    <div class="row-title">Proyect</div>
+                    <a class="oval-btn" href="https://terran-os.github.io/" target="_blank">Acceder</a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-oval-fixed">
+            <div class="bottom-oval">
+                <a class="bottom-link" href="https://hero-br.github.io" target="_blank">Home</a>
+                <a class="bottom-link" href="https://terranosstore.godaddysites.com/" target="_blank">Store</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
