@@ -1,7 +1,7 @@
 {
-  "name": "Conver Documentos",
-  "short_name": "Conver Documentos",
-  "start_url": "https://hero-br.github.io/convertidor-documentos.html",
+  "name": "Conver Picture",
+  "short_name": "Conver Picture",
+  "start_url": "https://hero-br.github.io/convertidor-picture.html",
   "display": "standalone",
   "background_color": "#060122",
   "theme_color": "#02c7f8",
