@@ -1,0 +1,21 @@
+{
+  "name": "WebApps",
+  "short_name": "WebApps",
+  "start_url": "https://hero-br.github.io/webapps.html",
+  "display": "standalone",
+  "background_color": "#060122",
+  "theme_color": "#02c7f8",
+  "description": "Acceso rápido herramientas onlines.",
+  "icons": [
+    {
+      "src": "picture/webapps.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "picture/webapps.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>WebApps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Fuente Campana Script (Google Fonts) -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Campana+Script&display=swap" rel="stylesheet">
+    <!-- Icono para barra de búsqueda y marcadores -->
+    <link rel="icon" type="image/png" href="Picture/webapps.png">
+    <!-- Si tienes un .ico, puedes usar también: -->
+    <!-- <link rel="icon" href="Picture/favicon.ico"> -->
+     <link rel="manifest" href="manifest.json">
     <style>
         body {
             min-height: 100vh;
@@ -15,39 +21,35 @@
             justify-content: center;
             font-family: 'Segoe UI', Arial, sans-serif;
         }
-        .top-brand {
+        .top-image {
             position: absolute;
-            top: 40px;
+            top: 32px;
             left: 0;
             right: 0;
             margin: auto;
             text-align: center;
-            font-size: 6em;
-            font-family: 'Campana Script', cursive, 'Pacifico', 'Segoe Script', 'Comic Sans MS', Calibri, sans-serif;
-            font-weight: normal;
-            color: #041292;
-            letter-spacing: 10px;
             z-index: 300;
             user-select: none;
-            /* Efecto 3D */
-            text-shadow:
-                0 4px 12px #1e6872,
-                0 1px 0 #2a7e98,
-                2px 2px 0 rgba(252, 252, 252, 0.533),
-                0 8px 24px rgba(253, 252, 252, 0.4);
-            filter: drop-shadow(0 2px 8px #2a5298);
+        }
+        .top-image img {
+            height: 110px;
+            width: auto;
+            border-radius: 24px;
+            box-shadow: 0 4px 24px #1e6872;
         }
         .central-box {
             background: #000314de;
             border-radius: 24px;
             box-shadow: 0 8px 32px rgba(2, 125, 241, 0.87);
-            padding: 40px 32px 24px 32px;
-            width: auto;
+            padding: 40px 32px 60px 32px; /* padding-bottom reducido */
+            max-width: 1200px;
+            margin: 0 auto 24px auto;     /* margen inferior reducido */
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 32px;
             justify-content: center;
+            border: 1px transparent #fcfdfd;
         }
         .row-container {
             display: flex;
@@ -116,18 +118,49 @@
             background: linear-gradient(90deg, #b502fc 0%, #22027c 100%);
             color: #ffffff;
         }
-        @media (max-width: 700px) {
+        @media (max-width: 1200px) {
+            .central-box {
+                max-width: 98vw;
+            }
+            .row-container {
+                flex-wrap: wrap;
+                gap: 18px;
+            }
+            .row {
+                min-width: 90px;
+            }
+        }
+        @media (max-width: 900px) {
             .row-container {
                 flex-direction: column;
-                gap: 24px;
+                gap: 18px;
             }
             .central-box {
-                padding: 24px 8px 16px 8px;
+                padding: 24px 8px 120px 8px;
             }
-            .top-brand {
-                font-size: 2.2em;
-                letter-spacing: 2px;
-                top: 16px;
+            .top-image img {
+                height: 60px;
+            }
+        }
+        @media (max-width: 600px) {
+            .central-box {
+                padding: 24px 8px 16px 8px;
+                border-radius: 10px;
+            }
+            .row-container {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .row {
+                min-width: unset;
+                width: 100%;
+            }
+            .row img {
+                width: 60px;
+                height: 60px;
+            }
+            .top-image img {
+                height: 60px;
             }
         }
         .bottom-oval-fixed {
@@ -138,45 +171,101 @@
             display: flex;
             justify-content: flex-end;
             width: auto;
+            pointer-events: auto;
         }
     </style>
 </head>
 <body>
-    <div class="top-brand">WebApps</div>
-    <div>
+    <!-- Imagen superior (reemplaza src por tu logo o imagen preferida) -->
+    <div class="top-image">
+        <img src="Picture/webapps.png" alt="Logo WebApps">
+    </div>
+    <div style="margin-top: 160px;">
         <div class="central-box">
+            <!-- Primera fila de 7 accesos -->
             <div class="row-container">
                 <div class="row">
-                    <img src="picture/conver.png" alt="Imagen 1">
+                    <img src="Picture/Conver.png" alt="Imagen 1">
                     <div class="row-title">Conver Picture</div>
-                    <a class="oval-btn" href="https://hero-br.github.io/convertidor-picture.html" target="_blank">Acceder</a>
+                    <a class="oval-btn" href="https://hero-br.github.io/convertidor-picture.html">Acceder</a>
                 </div>
                 <div class="row">
-                    <img src="picture/conver.png" alt="Imagen 2">
-                    <div class="row-title">Conver Documentos</div>
-                    <a class="oval-btn" href="https://hero-br.github.io/convertidor-documentos.html" target="_blank">Acceder</a>
+                    <img src="Picture/Conver.png" alt="Imagen 2">
+                    <div class="row-title">Conver PDF</div>
+                    <a class="oval-btn" href="https://hero-br.github.io/convertidor-documentos.html">Acceder</a>
                 </div>
                 <div class="row">
-                    <img src="picture/scribus.svg" alt="Imagen 3">
-                    <div class="row-title">Proyect</div>
-                    <a class="oval-btn" href="https://terran-os.github.io/" target="_blank">Acceder</a>
+                    <img src="Picture/scribus.svg" alt="Imagen 3">
+                    <div class="row-title">Proyect 1</div>
+                    <a class="oval-btn" href="https://terran-os.github.io/">Acceder</a>
                 </div>
                 <div class="row">
-                    <img src="picture/scribus.svg" alt="Imagen 3">
-                    <div class="row-title">Proyect</div>
-                    <a class="oval-btn" href="https://terran-os.github.io/" target="_blank">Acceder</a>
+                    <img src="Picture/scribus.svg" alt="Imagen 4">
+                    <div class="row-title">Proyect 2</div>
+                    <a class="oval-btn" href="https://terran-os.github.io/">Acceder</a>
                 </div>
                 <div class="row">
-                    <img src="picture/scribus.svg" alt="Imagen 3">
-                    <div class="row-title">Proyect</div>
-                    <a class="oval-btn" href="https://terran-os.github.io/" target="_blank">Acceder</a>
+                    <img src="Picture/scribus.svg" alt="Imagen 5">
+                    <div class="row-title">Proyect 3</div>
+                    <a class="oval-btn" href="https://terran-os.github.io/">Acceder</a>
+                </div>
+                <div class="row">
+                    <img src="Picture/scribus.svg" alt="Imagen 6">
+                    <div class="row-title">Proyect 4</div>
+                    <a class="oval-btn" href="https://terran-os.github.io/">Acceder</a>
+                </div>
+                <div class="row">
+                    <img src="Picture/scribus.svg" alt="Imagen 7">
+                    <div class="row-title">Proyect 5</div>
+                    <a class="oval-btn" href="https://terran-os.github.io/">Acceder</a>
                 </div>
             </div>
-        </div>
-        <div class="bottom-oval-fixed">
-            <div class="bottom-oval">
-                <a class="bottom-link" href="https://hero-br.github.io" target="_blank">Home</a>
-                <a class="bottom-link" href="https://terranosstore.godaddysites.com/" target="_blank">Store</a>
+            <!-- Segunda fila de 7 accesos -->
+            <div class="row-container" style="margin-top:24px;">
+                <div class="row">
+                    <img src="Picture/scribus.svg" alt="Imagen 8">
+                    <div class="row-title">Proyect 6</div>
+                    <a class="oval-btn" href="https://terran-os.github.io/">Acceder</a>
+                </div>
+                <div class="row">
+                    <img src="Picture/scribus.svg" alt="Imagen 9">
+                    <div class="row-title">Proyect 7</div>
+                    <a class="oval-btn" href="https://terran-os.github.io/">Acceder</a>
+                </div>
+                <div class="row">
+                    <img src="Picture/scribus.svg" alt="Imagen 10">
+                    <div class="row-title">Proyect 8</div>
+                    <a class="oval-btn" href="https://terran-os.github.io/">Acceder</a>
+                </div>
+                <div class="row">
+                    <img src="Picture/scribus.svg" alt="Imagen 11">
+                    <div class="row-title">Proyect 9</div>
+                    <a class="oval-btn" href="https://terran-os.github.io/">Acceder</a>
+                </div>
+                <div class="row">
+                    <img src="Picture/scribus.svg" alt="Imagen 12">
+                    <div class="row-title">Proyect 10</div>
+                    <a class="oval-btn" href="https://terran-os.github.io/">Acceder</a>
+                </div>
+                <div class="row">
+                    <img src="Picture/scribus.svg" alt="Imagen 13">
+                    <div class="row-title">Proyect 11</div>
+                    <a class="oval-btn" href="https://terran-os.github.io/">Acceder</a>
+                </div>
+                <div class="row">
+                    <img src="Picture/scribus.svg" alt="Imagen 14">
+                    <div class="row-title">Proyect 12</div>
+                    <a class="oval-btn" href="https://terran-os.github.io/">Acceder</a>
+                </div>
+             </div>
+            </div>
+        </div> <!-- cierre de central-box -->
+    </div>
+    <!-- Cuadro inferior fijo en la esquina derecha, fuera del central-box -->
+    <div class="bottom-oval-fixed">
+        <div class="bottom-oval">
+                <a class="bottom-link" href="https://hero-br.github.io/">Home</a>
+                <a class="bottom-link" href="https://br-cybec.github.io/store.html">Store</a>
             </div>
         </div>
     </div>
