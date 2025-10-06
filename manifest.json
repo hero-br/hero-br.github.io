@@ -1,11 +1,11 @@
 {
   "name": "WebApps",
   "short_name": "WebApps",
-  "start_url": "https://hero-br.github.io/webapps.html",
+  "start_url": "https://hero-br.github.io/convertidor-picture.html",
   "display": "standalone",
   "background_color": "#060122",
   "theme_color": "#02c7f8",
-  "description": "Acceso rápido herramientas onlines.",
+  "description": "Convertior rápido de imagenes onlines.",
   "icons": [
     {
       "src": "picture/webapps.png",
